@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B4E4AEF1FA620C500DAFAEF /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4E4AEE1FA620C400DAFAEF /* NVActivityIndicatorView.framework */; };
+		6B4E4AF01FA620C500DAFAEF /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4E4AEE1FA620C400DAFAEF /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B9DF8631F9CB9DA00D8BA4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DF8621F9CB9DA00D8BA4B /* AppDelegate.swift */; };
 		6B9DF8651F9CB9DA00D8BA4B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DF8641F9CB9DA00D8BA4B /* FirstViewController.swift */; };
 		6B9DF8671F9CB9DA00D8BA4B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9DF8661F9CB9DA00D8BA4B /* SecondViewController.swift */; };
@@ -47,6 +49,7 @@
 			files = (
 				6BA212D91F9CC159001517D6 /* Kanna.framework in Embed Frameworks */,
 				6BA212D51F9CC121001517D6 /* Alamofire.framework in Embed Frameworks */,
+				6B4E4AF01FA620C500DAFAEF /* NVActivityIndicatorView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B4E4AEE1FA620C400DAFAEF /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		6B9DF85F1F9CB9DA00D8BA4B /* masupo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = masupo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B9DF8621F9CB9DA00D8BA4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B9DF8641F9CB9DA00D8BA4B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			files = (
 				6BA212D81F9CC159001517D6 /* Kanna.framework in Frameworks */,
 				6BA212D41F9CC121001517D6 /* Alamofire.framework in Frameworks */,
+				6B4E4AEF1FA620C500DAFAEF /* NVActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +107,7 @@
 		6B9DF8561F9CB9DA00D8BA4B = {
 			isa = PBXGroup;
 			children = (
+				6B4E4AEE1FA620C400DAFAEF /* NVActivityIndicatorView.framework */,
 				6BA212D71F9CC159001517D6 /* Kanna.framework */,
 				6BA212D31F9CC121001517D6 /* Alamofire.framework */,
 				6B9DF8611F9CB9DA00D8BA4B /* masupo */,
