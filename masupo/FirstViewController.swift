@@ -11,10 +11,17 @@ import NVActivityIndicatorView
 
 
 class FirstViewController: UIViewController {
+    
+    var indicator: NVActivityIndicatorView!;
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        indicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        indicator.color = UIColor.red
+        indicator.type = NVActivityIndicatorType.ballScaleMultiple
+        indicator.startAnimating()
+        indicator.center = view.center
     }
 
     override func didReceiveMemoryWarning() {
