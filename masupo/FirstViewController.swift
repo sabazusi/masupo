@@ -17,11 +17,12 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        indicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        indicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 260, height: 260))
         indicator.color = UIColor.red
-        indicator.type = NVActivityIndicatorType.ballScaleMultiple
+        indicator.type = NVActivityIndicatorType.lineSpinFadeLoader
         indicator.startAnimating()
         indicator.center = view.center
+        print("hai")
     }
 
     override func didReceiveMemoryWarning() {
