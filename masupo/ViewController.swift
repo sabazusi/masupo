@@ -1,14 +1,14 @@
 //
-//  SecondViewController.swift
+//  ViewController.swift
 //  masupo
 //
-//  Created by sabazusi on 10/22/17.
+//  Created by sabazusi on 11/5/17.
 //  Copyright © 2017 sabazusi. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
