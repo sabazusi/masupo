@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, NVActivityIndicatorViewable {
+    
+    var indicator: NVActivityIndicatorView!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        indicator = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 60, height: 260))
+        indicator.color = UIColor.gray
+        indicator.type = NVActivityIndicatorType.lineSpinFadeLoader
+        
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
+        indicator.center = view.center
     }
 
     override func didReceiveMemoryWarning() {
