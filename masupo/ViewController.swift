@@ -11,10 +11,11 @@ import Alamofire
 import Kanna
 import NVActivityIndicatorView
 
-class ViewController: UIViewController, NVActivityIndicatorViewable {
+class ViewController: UIViewController, NVActivityIndicatorViewable, UITableViewDelegate, UITableViewDataSource {
     
     var indicator: NVActivityIndicatorView!;
     private let MASUDA_URL = "https://anond.hatelabo.jp";
+    var entries: Array<String> = ["a", "b", "c"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,9 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
         if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
             for node in doc.css("div.section") {
                 for heads in node.css("h3") {
-                    print(heads.text);
+                    if let title = heads.text {
+                        self.entries.append(title)
+                    }
                 }
             }
         }
@@ -45,6 +48,8 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
             if let html = response.result.value {
                 self.parseHTML(html: html)
             }
+            self.indicator.stopAnimating()
+            // todo: reload data with UITableViewController
         }
     }
 
@@ -52,7 +57,20 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return entries.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath)
+        cell.textLabel!.text = entries[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(entries[indexPath.row]);
+    }
+    
 }
 
